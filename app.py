@@ -42,7 +42,7 @@ else:
     filtered_data = data_s[data_s.price.isin(actual_range)]
 
 st.write('This is the price range of each vehicle type in your condition and price range')
-type_vs_price = px.box(filtered_data,y='price',x='type')
+type_vs_price = px.scatter(filtered_data,y='price',x='type')
 st.plotly_chart(type_vs_price)
 
 posted = st.checkbox('Show me only 4wd cars')
